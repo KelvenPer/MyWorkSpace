@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fundamentos da Programação Web</title>
+    <style>
+        /* Adiciona estilo ao botão Início */
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
+        .nav-buttons button, .nav-buttons a button {
+            margin: 0 5px;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo-container .logo {
+            margin-right: 10px;
+        }
+        .logo-container .start-btn {
+            padding: 5px 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">Kelven Silva<span>.</span></div>
+            </div>
+            <!-- <label><input class="pesquisa" type="text" placeholder="Em que posso ajudar"></label> -->
+            <div class="nav-buttons">
+                <a href="dica.html"><button type="button">Dicas</button></a>
+                <a href="sobreMim.html"><button type="button">Sobre Mim</button></a>
+                <a href="projetos.html"><button type="button">Projetos</button></a>
+                <button type="button">Ajuda</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="#" method="post">
+                <!-- Informações pessoais -->
+                <div>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div>
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+        
+                <!-- Seleção de cursos -->
+                <div>
+                    <label>Selecione o curso que deseja ajuda:</label><br>
+                    <input type="checkbox" id="python" name="course" value="python">
+                    <label for="python">Python</label><br>
+                    <input type="checkbox" id="javascript" name="course" value="javascript">
+                    <label for="javascript">JavaScript</label><br>
+                    <input type="checkbox" id="cpp" name="course" value="cpp">
+                    <label for="cpp">C++</label><br>
+                    <input type="checkbox" id="java" name="course" value="java">
+                    <label for="java">Java</label>
+                </div>
+        
+                <!-- Nível de experiência -->
+                <div>
+                    <label>Qual o seu nível?</label><br>
+                    <input type="radio" id="beginner" name="level" value="beginner" required>
+                    <label for="beginner">Iniciante</label><br>
+                    <input type="radio" id="intermediate" name="level" value="intermediate">
+                    <label for="intermediate">Intermediário</label><br>
+                    <input type="radio" id="advanced" name="level" value="advanced">
+                    <label for="advanced">Avançado</label>
+                </div>
+        
+                <!-- Comentário prévio -->
+                <div>
+                    <label for="comments">Comentário prévio:</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Digite seu comentário aqui..."></textarea>
+                </div>
+        
+                <!-- Botão de envio -->
+                <div>
+                    <button type="submit" id="submitBtn">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o envio real do formulário
+    
+            // Exibe a mensagem de sucesso
+            alert('Formulário enviado com sucesso!');
+    
+            // Limpa o formulário
+            document.querySelector('form').reset();
+            
+            // Se você quiser realmente enviar o formulário via AJAX ou outro método, pode adicionar o código aqui.
+        });
+    </script>
+</body>
+</html>

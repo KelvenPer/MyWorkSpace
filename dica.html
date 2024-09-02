@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">Kelven Silva<span>.</span></div>
+            </div>
+            <div class="nav-buttons">
+                <a href="dica.html"><button type="button">Dicas</button></a>
+                <a href="sobreMim.html"><button type="button">Sobre Mim</button></a>
+                <a href="projetos.html"><button type="button">Projetos</button></a>
+                <a href="index.html"><button type="button">Início</button></a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="logo-container">
+                <div class="logo-item">
+                    <img src="./img/logo-HTML.png" alt="HTML Logo" id="htmlLogo">
+                    <p id="htmlText" class="hidden">HTML (HyperText Markup Language) é a linguagem padrão para criar páginas web.</p>
+                </div>
+                <div class="logo-item">
+                    <img src="./img/logo-CSS.png" alt="CSS Logo" id="cssLogo">
+                    <p id="cssText" class="hidden">CSS (Cascading Style Sheets) é usado para estilizar elementos escritos em uma linguagem de marcação como HTML.</p>
+                </div>
+                <div class="logo-item">
+                    <img src="./img/logo-JS.png" alt="JavaScript Logo" id="jsLogo">
+                    <p id="jsText" class="hidden">JavaScript é uma linguagem de programação usada para criar conteúdo interativo em páginas web.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Função para esconder todos os textos
+        function hideAllTexts() {
+            document.getElementById('htmlText').classList.add('hidden');
+            document.getElementById('cssText').classList.add('hidden');
+            document.getElementById('jsText').classList.add('hidden');
+        }
+
+        // Script para exibir os textos ao clicar nas logos
+        document.getElementById('htmlLogo').addEventListener('click', function() {
+            hideAllTexts();
+            document.getElementById('htmlText').classList.toggle('hidden');
+        });
+
+        document.getElementById('cssLogo').addEventListener('click', function() {
+            hideAllTexts();
+            document.getElementById('cssText').classList.toggle('hidden');
+        });
+
+        document.getElementById('jsLogo').addEventListener('click', function() {
+            hideAllTexts();
+            document.getElementById('jsText').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
